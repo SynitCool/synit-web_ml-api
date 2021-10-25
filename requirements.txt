@@ -10,8 +10,9 @@ Jinja2==3.0.1
 joblib==1.0.1
 MarkupSafe==2.0.1
 numpy==1.21.1
+pickle-mixin==1.0.2
 requests==2.26.0
-scikit-learn==0.24.2
+scikit-learn==1.0.1
 scipy==1.7.0
 sklearn==0.0
 threadpoolctl==2.2.0
