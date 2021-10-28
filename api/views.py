@@ -13,7 +13,7 @@ def home():
 
 @views.route("/api")
 def api():
-    return render_template("api_pages/api.html")
+    return render_template("api_pages/api_overview.html")
 
 @views.route("/about")
 def about():

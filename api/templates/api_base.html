@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Synit Web - ML API{% endblock %}
+{% block content %}
+<div class="flex-shrink-0 p-3">
+    <p class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+      <span class="fs-5 fw-semibold">APIs</span>
+    </p>
+    <ul class="list-unstyled ps-0">
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+          Online Shoppers
+        </button>
+        <div class="collapse" id="home-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="/api/online-shopper/overview" class="link-dark rounded">Overview</a></li>
+            <li><a href="/api/online-shopper/feature" class="link-dark rounded">Feature</a></li>
+            <li><a href="/api/online-shopper/credit" class="link-dark rounded">Credit</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="border-top my-3"></li>
+    </ul>
+</div>
+<br/>
+{% block api_content %}
+{% endblock %}
+{% endblock %}
