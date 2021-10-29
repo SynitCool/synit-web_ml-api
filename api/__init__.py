@@ -7,10 +7,10 @@ def create_app():
 
     from .views import views
     from .online_shopper_views import online_shopper_views
-    # from .online_shopper.online_shopper_api import online_shopper_api
+    from .online_shopper.online_shopper_api import online_shopper_api
 
     app.register_blueprint(views)
     app.register_blueprint(online_shopper_views)
-    # app.register_blueprint(online_shopper_api)
+    app.register_blueprint(online_shopper_api)
 
     return app
