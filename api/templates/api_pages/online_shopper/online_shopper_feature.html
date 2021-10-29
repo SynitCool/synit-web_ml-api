@@ -1,0 +1,115 @@
+{% extends "api_base.html" %}
+{% block title %}Synit Web - ML API{% endblock %}
+{% block api_content %}
+<!-- Feature online shopper -->
+<div class="p-5">
+    <!-- Overview Feature -->
+    <overview>
+        <h1 class="h1">Features or Content</h1>
+        <hr/>
+        <p class="lead">
+            The features in this api is about how you use it and i'll show you what the type input is, you can 
+            also try to use this api.
+        </p>
+    </overview>
+    <br/>
+    <!-- Feature -->
+    <feature>
+        <h2 class="h2">Model</h2>
+        <hr/>
+        <p class="lead">
+            The model in this api is using Random Forest Classifier by scikit-learn. In the future will be 
+            there more than 1 model in this Api that you can pick.
+        </p>
+    </feature>
+    <br/>
+    <!-- How to -->
+    <how-to>
+        <h2 class="h2">How To</h2>
+        <hr/>
+        <!-- Calling the library -->
+        <p class="lead">
+            In this API we're gonna try to predict from the model, the first thing we need to import library 
+            we need to call the api, we're gonna need to call requests and json library, 
+            so let's code it on python!
+        </p>
+        <code><pre>
+            import requests
+            import json
+        </pre></code>
+        <!-- Make data -->
+        <p class="lead">
+            The next step let's add some data and make it to json object!
+        </p>
+        <code><pre>
+            data = {
+                "input": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0.2,
+                    0.2,
+                    0,
+                    0,
+                    "Feb",
+                    1,
+                    1,
+                    1,
+                    1,
+                    "Returning_Visitor",
+                    False,
+                ]
+            }
+            
+            data = json.dumps(data)
+        </pre></code>
+        <!-- call the model or api -->
+        <p class="lead">
+            let's call the api or predict the data!
+        </p>
+        <code><pre>
+            url = "http://127.0.0.1:5000/api_test"
+
+            print(requests.post(url, data).json())
+        </pre></code>
+        <!-- Full code -->
+        <p class="lead">
+            That's how you predict or call the api in this model, for full code in the below!
+        </p>
+        <code><pre>
+            import requests
+            import json
+
+            data = {
+                "input": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0.2,
+                    0.2,
+                    0,
+                    0,
+                    "Feb",
+                    1,
+                    1,
+                    1,
+                    1,
+                    "Returning_Visitor",
+                    False,
+                ]
+            }
+
+            data = json.dumps(data)
+            url = "http://127.0.0.1:5000/api_test"
+
+            print(requests.post(url, data).json())
+        </pre></code>
+    </how-to>
+</div>
+{% endblock %}
