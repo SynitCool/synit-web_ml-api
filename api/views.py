@@ -18,3 +18,7 @@ def api():
 @views.route("/about")
 def about():
     return render_template("about_pages/about.html")
+
+@views.route("/scrt-pgs/none-ks/jt-df-rm/dly")
+def secret():
+    return "<p>01101001 00100000 01101100 01101111 01110110 01100101 00100000 01111001 01101111 01110101 00100000 01100010 01100001 01100010 01100101 <p><p>愛してます<p>"
