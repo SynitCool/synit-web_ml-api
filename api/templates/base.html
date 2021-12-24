@@ -5,12 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet"/>
         <link href="{{url_for('static', filename='css/sidebars.css')}}" rel="stylesheet"/>
+        <link href="{{url_for('static', filename='css/default-pages.css')}}" rel="stylesheet"/>
+        <link href="{{url_for('static', filename='css/footer-style.css')}}" rel="stylesheet"/>
+        <script src="https://kit.fontawesome.com/0591544cfc.js" crossorigin="anonymous"></script>
         <title>Synit Web - ML API</title>
     </head>
     <body>
+      <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="/">ML API - 0.0.0</a>
+              <a class="navbar-brand" href="/">ML API - 0.1.0</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -32,35 +36,39 @@
               </div>
             </div>
           </nav>
-        {% block content %}
-        {% endblock%}
-        <div class="p-5 bg-dark" style="position: relative; bottom: 0px;">
+      </header>
+      {% block content %}
+      {% endblock%}
+      <footer>
+          <div class="p-5 bg-dark text-light" style="position: relative; bottom: 0px;">
             <div class="row">
               <div class="col">
                 <div class="container">
-                  <h4 style="color: aliceblue">Find Me</h4>
-                  <span>
-                    <a href="https://www.github.com/SynitCool" target="_blank">
-                      <img src="{{url_for('static', filename='assets/github-logo.png')}}" width=35 height=35/>
-                    </a>
-                    <a href="https://www.kaggle.com/synitiscool" target="_blank" style="padding:0.5em;">
-                      <img src="{{url_for('static', filename='assets/kaggle-logo.png')}}" width=35 height=35/>
-                    </a>
-                    <a href="https://www.freecodecamp.org/fcc486c4e09-f778-4dc6-a365-79de7a9a19d8" target="_blank">
-                      <img src="{{url_for('static', filename='assets/fcc-logo.png')}}" width=35 height=35/>
-                    </a>
-                  </span>
+                  <h4>Find Me</h4>
+                  <ul class="mb-4 socials">
+                    <li><a href="https://www.github.com/SynitCool" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://id.linkedin.com/in/bryan-al-hilal-siregar-333b49225" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                    <li><a href="https://www.kaggle.com/synitiscool" target="_blank"><i class="fab fa-kaggle"></i></a></li>
+                    <li><a href="https://www.freecodecamp.org/fcc486c4e09-f778-4dc6-a365-79de7a9a19d8" target="_blank"><i class="fab fa-free-code-camp"></i></a></li>
+                  </ul>
                 </div>
               </div>
               <div class="col">
-                <h4 style="color: aliceblue">This Website</h4>
-                <p class="lead" style="color: aliceblue;">
-                  This is machine learning apis that are made for production and i posted it on my website 
-                  so anyone can use these apis.
+                <h4>This Website</h4>
+                <p class="lead">
+                  This is machine learning apis that are made for production and 
+                  i posted it on my website so anyone can use these apis.
                 </p>
               </div>
             </div>
+            <div class="bg-dark text-center" style="position: relative; width: 200px; height: 100px; padding-top: 5%;">    
+              <div style="position: relative; bottom: 5px;">
+                v0.1.0 </br>
+                oct, 2021 - dec, 2021
+              </div>
+          </div>
         </div>
+      </footer>
       <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
     </body>
 </html>
