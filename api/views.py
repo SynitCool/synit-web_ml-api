@@ -7,17 +7,21 @@ views = Blueprint("views", __name__)
 def index():
     return render_template("index.html")
 
+
 @views.route("/home")
 def home():
     return render_template("home_pages/home.html")
+
 
 @views.route("/api")
 def api():
     return render_template("api_pages/api_overview.html")
 
+
 @views.route("/about")
 def about():
     return render_template("about_pages/about.html")
+
 
 @views.route("/scrt-pgs/none-ks/jt-df-rm/dly")
 def secret():
